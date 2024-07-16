@@ -23,9 +23,9 @@ test.describe('Login', () => {
         // Click on "Log in"
         await app.navbar.clickLoginLink()
         // Enter an incorrect username and password and attempt to log in
-        await app.loginSteps.login('incorrect_username', 'incorrect_password')
+        await app.loginSteps.login('cgautotest@mailforspam.com', 'incorrect_password')
         // Verify that an error message appears and the login is not completed
         await app.loginPage.expectErrorMessageToBeVisible()
-        await app.loginPage.expectErrorMessageTextToBe('Incorrect username or password entered. Please try again.')
+        await app.loginPage.expectErrorMessageTextToBe('Incorrect email address or password')
     })
 })
