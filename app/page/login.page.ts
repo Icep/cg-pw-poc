@@ -8,7 +8,7 @@ export class LoginPage extends AppPage {
     readonly nextButton: Locator = this.userLoginForm.locator(`[data-cg-ft='login-next-button']`)
     readonly passwordInput: Locator = this.userLoginForm.locator('#loginPassword')
     readonly loginButton: Locator = this.userLoginForm.locator(`[data-cg-ft='login-sign-in-button']`)
-    readonly loginErrorMessage: Locator = this.userLoginForm.locator('#errorMessageBox')
+    readonly loginErrorMessage: Locator = this.userLoginForm.locator('#errorMessageBox p')
     readonly loginSuccessMessage: Locator = this.userLoginForm.locator('.cdx-message--success') //need to update locator after account creation
 
     public async expectLoaded(message = 'Expected Login page to be loaded'): Promise<void> {
